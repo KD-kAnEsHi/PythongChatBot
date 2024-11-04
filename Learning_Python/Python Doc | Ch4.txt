@@ -4,8 +4,8 @@
 
 
 
-print()
-print()
+IF Statement|--------------------------------------------------------------------------------------------
+
 print("Topic: If Statement")
 # If statements,   nonensical stuff for real hahhaahhaa.
 
@@ -24,8 +24,9 @@ else:
 
 
 
-print()
-print()
+
+For Loops|--------------------------------------------------------------------------------------------
+
 print("Topic: For Loops")
 #Time to learn for loops, goated loops FR
 
@@ -37,8 +38,8 @@ for i in wordList:
 
 
 
-print()
-print()
+Collections|--------------------------------------------------------------------------------------------
+
 print("Topic: Collection")
 #Collections: No idea what this is, but it sees interestting. 
 
@@ -62,8 +63,8 @@ for user, status in users.items():   # we are modifying teh actual list and not 
 
 
 
-print()
-print()
+Range|--------------------------------------------------------------------------------------------
+
 print("Topic: Range")
 # 'Range()' Function, I also have no idea as to what this does but lets learn!!!
 
@@ -86,8 +87,10 @@ for i in range(len(words)):
 
 
 
-print()
-print()
+
+
+Brea/continue|--------------------------------------------------------------------------------------------
+
 print("Topic: Break and Conitnue")
 # 'break' statemetn breaks out of the innermosts enclosing while loop and for loop
 for out in range(2, 10):
@@ -106,8 +109,9 @@ for num in range(2, 10):
 
 
 
-print()
-print()
+
+While Loops|--------------------------------------------------------------------------------------------
+
 print("Topic: Else statement for While/For Loops")
 # We can have an else statement that execute after each iteration of the for/while loop running
 # Does not work if the loop was terminated by a break, or return statement
@@ -123,8 +127,8 @@ for outter in range(2, 10):
 
 
 
-print()
-print()
+Pass Statement|--------------------------------------------------------------------------------------------
+
 print("Topic: Pass Statements")
 # Generally does nothing, can be used wehn a statement is requrie syntactycally
 
@@ -136,8 +140,10 @@ print("Topic: Pass Statements")
 
 
 
-print()
-print()
+
+
+Match/Switch Statement|--------------------------------------------------------------------------------------------
+
 print("Topic: Match/Switch Statement")
 # A matarch statement that take an experssion an dcompre its value to sucessive 
 # pattern a sone or more bloocks
@@ -153,16 +159,7 @@ def checkError(status):
         case _: # defaul statement
             return "Hey memo, check internet insted"      
 
-# Check if the inserted points, fits compared ot my golves
-match point:
-    case(0, 0):
-        print("Origine points")
-    case(0, y):
-        print(f"Y={y}")
-    case(X, 0):
-        print(f"Y={X}")
-    case _:
-        raise ValueError("Not a points: return to normal live")
+
 
 
 print()
@@ -170,8 +167,68 @@ print("Match/Switch Statement -: If Clause/Guards")
 # Add an 'if clause' to a pattern, also reffered as the guard. If the guard is false, match gos on to try the next
 # case block. 
 
+class Point: 
+    __match_args__ = ('x', 'y')         # argument passed to a fucntion it seems
+    def __init__ (self, x, y):
+        self.x = x
+        self.y = y
+
+#Normal
+match points:       
+    case []:                            # print nothing if the list is empty
+        print("No Points")
+    case [Point(0, 0)]:                 # print "origine" if coordiante are (0,0)
+        print("The Origine")
+    case [Point(x, y)]:
+        print(f"Single points {x}, {y}")
+    case [Point(x, y)]:
+        print(f"prints the outputted points")
+    case [Point(0, y1), Point(0, y2)]:
+    #case _:
+    #    print("nothin to be outputted")
 
 
 
 
 
+
+
+Match/Switch Statement w/ if statements|--------------------------------------------------------------------------------------------
+
+# with If satement or guards
+match point:
+    case Point(x, y) if x == y:         # This if statement only works if the guard all day, 
+
+
+
+
+
+
+
+
+Match/Switch Statement Statement w/ Emurates|--------------------------------------------------------------------------------------------
+
+#making a user of Emurates with switch statements
+from enum import enumerate                  # Need in order to make use of emurate in python
+
+class color(Enum):                          # Instantiated a set of 3 emurators 
+    GREEN = 'green'   
+    RED = 'red'
+    BLUE = 'blue'
+                                            # Which ever user chooses, will be associated with an emu
+color = Color(input("Enter your choice of 'red', 'blue' or 'green': "))         
+        
+match color:
+    case color.RED:                     
+        print("red was found in the list")  # Print this message if the user choose RED
+    case color.GREEN:
+        print("Gras ia green for use")      # Print this message if the user choose RED
+    case color.BLUE:
+        print("The sky is blue today")      # Print this message if the user choose RED
+        
+
+
+
+
+
+Functions |--------------------------------------------------------------------------------------------
