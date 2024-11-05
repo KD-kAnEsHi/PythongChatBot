@@ -369,3 +369,20 @@ concat("earth", "mars", "venus", sep=".")
 
 # Unpacking Argumetn Lists Argument Lists |--------------------------------------------------------------------------------------------
 
+
+
+Function Annatations |--------------------------------------------------------------------------------------------
+
+# Print an anottio of the ouputs of the program, show how the ouput look like and demonstrate how the program
+goes through the function
+
+Example:
+    def f(ham: str, eggs: str = 'eggs') -> str:
+        print("Annotations:", f.__annotations__)
+        print("Arguments:", ham, eggs)
+        return ham + ' and ' + eggs
+
+    f('spam')
+    Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}
+    Arguments: spam eggs
+    'spam and eggs'
