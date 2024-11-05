@@ -8,4 +8,12 @@
 # at the end of the quiz.
 
 
+print()
+print("------------------------------Welcome to Quiz game-----------------------------")
+print()
+print("Here is how the game works: ")
+print("Input your questions and answer and I shuffle and have you answer them")
+print()
 
+
+questionsList = []

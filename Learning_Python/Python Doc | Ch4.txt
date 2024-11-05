@@ -232,3 +232,19 @@ match color:
 
 
 Functions |--------------------------------------------------------------------------------------------
+
+# Fibonaccia function implemeted in java
+def fib(n):                 
+    a, b = 0, 1
+    while a < n:
+        print(a, end =' ')
+        a, b = b, a + B
+    print()
+
+fib(4) # call function
+
+
+# Functions with arguments passed to it
+def askIfok
+
+
