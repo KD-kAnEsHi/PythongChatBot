@@ -1,2 +1,51 @@
 Data Structures
 
+
+
+
+
+Lists Data Structures:
+
+
+
+
+
+
+
+
+Stack, List Data Structures:
+
+
+
+
+
+
+
+Queue, List Data Structures:
+
+
+
+
+    Queue - colletions Functions: 
+
+    Example: from collection import deque
+
+
+
+
+
+
+List, 1 Line of code for looping Functions:
+
+
+
+
+
+
+
+
+
+
+
+Nested List Comprehensions:
+
