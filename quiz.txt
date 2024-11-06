@@ -1,0 +1,12 @@
+using javascript and dom
+
+1 - change the text content of the last name heading to address, if the user click
+on the button
+
+2 - change the background color of the age input to red if the age is not a valid age
+(20 - 30). if it is valid, change it to yellow
+
+3 - If the first name entered by user is valid (only letters), then change it to 
+upper change 
+
+

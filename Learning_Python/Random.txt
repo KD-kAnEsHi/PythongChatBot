@@ -1,0 +1,24 @@
+How to round numbers in python:
+    strs(round( piNumber, i))       # Round the decimal by the value i
+
+
+Combine sublists in python:
+    list(zip(matrix))               # function is used to combine multiple iterables (such as lists, 
+                                    tuples, or strings) into an iterator of tuples
+
+        Example: 
+            a = [1, 2, 3]
+            b = ['a', 'b', 'c']
+            result = zip(a, b)
+            print(list(result))  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+
+
+Different between lists and tuples:
+    - Tuples are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking 
+    while or or indexing 
+    - Lists are mutable, and their elements are usually homogeneous and are accessed by iterating over the list.
+
+
+
+    
+
