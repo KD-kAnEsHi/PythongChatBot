@@ -260,14 +260,106 @@ Set, Data Structures:
 
 Dictionaries, Data Structures:
 
+    Another useful data type built into Python is the dictionary (see Mapping Types — dict). Dictionaries are sometimes found in other 
+    languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range of numbers, dictionaries 
+    are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they 
+    contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a
+    key. You can’t use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like 
+    append() and extend().
 
+    Example:
 
+        tel = {'jack': 4098, 'sape': 4139}
 
+        tel['guido'] = 4127             output: {'jack': 4098, 'sape': 4139, 'guido': 4127}
 
-
+        tel['jack']                     output: 4098
         
+        del tel['sape']
+        tel['irv'] = 4127               output: {'jack': 4098, 'guido': 4127, 'irv': 4127}
+        
+        list(tel)                       output: ['jack', 'guido', 'irv']
+        
+        sorted(tel)                     output: ['guido', 'irv', 'jack']
+
+        'guido' in tel                  output: True
+
+            
+
+    1-Line Dictionaries calls:
+        dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])          output: {'sape': 4139, 'guido': 4127, 'jack': 4098}
 
 
+
+
+
+
+
+
+Looping techniques, Data Structrues:
+
+    Looping through dictionaries - When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.
+
+    Example: 
+        knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+        for k, v in knights.items():
+            print(k, v)
+                                        output: gallahad the pure           # ouputs both the key and the values
+                                                robin the brave
+
+
+
+    When looping we can make use of 'enumerate()' function to get the position index and teh corresponding values
+        for i, v in enumerate(['tic', 'tac', 'toe']):
+            print(i, v)
+
+
+
+
+    using zip()  to loop over 2 list at the same time - To loop over two or more sequences at the same time, the entries can be paired with the zip() function.
+
+        questions = ['name', 'quest', 'favorite color']
+        answers = ['lancelot', 'the holy grail', 'blue']
+
+        for q, a in zip(questions, answers):                                    # .zip() goes through both lists in pairs of 2s
+            print('What is your {0}?  It is {1}.'.format(q, a))                 # .format(q, a), specifies that q = 0, and a = 1
+
+        output: 
+            What is your name?  It is lancelot.
+            What is your quest?  It is the holy grail.
+            What is your favorite color?  It is blue.
+
+
+
+
+
+    Loop over a sequence in reverse: reverse()
+
+    Example:
+        for i in reverse(range(1, 10, 2)):
+            print(i)
+
+                output: 9 7 5 3 1
+
+    
+
+
+    To loop over a sequence in sorted order: us the sorted()
+
+    Example: List
+        basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+        for i in sorted(basket):
+            print(i)
+
+                output: apple apple banana orange orange pear
+
+
+    Example: Set
+            basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+            for f in sorted(set(basket)):                                           # specifies that its a set
+                print(i)
+
+                    output: apple apple banana orange orange pear
 
 
 
