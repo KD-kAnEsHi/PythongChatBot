@@ -1,0 +1,126 @@
+
+
+                                        Input and Ouput
+
+
+
+write(): 
+
+    formatted string literals: begin a string with f or F before the opening quotation mark or triple quotation mark. Inside this string, 
+        you can write a Python expression between { and } characters that can refer to variables or literal values.
+
+        Example:
+
+            year = 2016
+            event = 'Referendum'
+
+                    # Make sure to have 'f' at the front and bracket with the variable names written in it
+            > f'Results of the {year} {event}'                                  output: f'Results of the 2016 Referendum'
+
+
+
+
+str.format():
+
+    method of strings requires more manual effort. You’ll still use { and } to mark where a variable will be substituted and can provide 
+    detailed formatting directives, but you’ll also need to provide the information to be formatted
+
+        Example: 
+
+            yes_votes = 42_572_654
+            total_votes = 85_705_149
+            percentage = yes_votes / total_votes
+
+                # Ouputs the values from the list:    '{:-9} , means that if the number has less thatn 9 integers/character it will 
+                    ptiny the number from the right and have space on the left side.
+                # {:2.2%}, adds ther percentage sign and makes the value a float
+            '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)             output: ' 42572654 YES votes  49.67%'
+
+
+
+
+
+
+
+
+repr()/str():
+
+    he str() function is meant to return representations of values which are fairly human-readable, while repr() is meant to generate 
+    representations which can be read by the interpreter (or will force a SyntaxError if there is no equivalent syntax). For objects which
+    don’t have a particular representation for human consumption, str() will return the same value as repr(). Many values, such as numbers
+    or structures like lists and dictionaries, have the same representation using either function. Strings, in particular, have two 
+    distinct representations.
+
+    Example:
+            s = 'Hello, world.'
+            > str(s)                                                              output: 'Hello, world.'
+
+            repr(s)
+            "'Hello, world.'"
+            str(1/7)                                                               utuput: "'Hello, world.'"
+
+            
+            x = 10 * 3.25
+            y = 200 * 200
+                s = 'The value of x is ' + repr(x) + ', and y is ' + repr(y) + '...' output:    The value of x is 32.5, and y is 40000...
+            # The repr() of a string adds string quotes and backslashes:
+            
+
+            hello = 'hello, world\n'
+            hellos = repr(hello)
+            print(hellos)                                                             hello, world\n'
+            
+
+            # The argument to repr() may be any Python object:
+            repr((x, y, ('spam', 'eggs')))                                             ouput: "(32.5, 40000, ('spam', 'eggs'))"
+
+
+
+
+
+
+
+
+
+
+
+
+Formatted String Literals:
+
+    Formatted string literals (also called f-strings for short) let you include the value of Python expressions inside a string by prefixing the string with f or F 
+    and writing expressions as {expression}. An optional format specifier can follow the expression. This allows greater control over how the value is formatted. 
+
+
+    Example: modules
+
+        import math
+
+            # Dont forget about the 'f' in the front, this program gets PI and round it by 3
+        print(f'The value of pi is approximately {math.pi:.3f}.')                           output: 'The value of pi is approximately 3.142.'
+
+
+
+    Example: dictionaries
+
+        table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
+
+        for name, phone in table.items():                   # get each item in the dictionaries
+            print(f'{name:10} ==> {phone:10d}')             # this program prints the ouputs name in the list followed by the integer
+
+                        
+                        output:     
+                                    Sjoerd     ==>       4127
+                                    Jack       ==>       4098
+                                    Dcab       ==>       7678
+
+
+    Example: 
+    
+        # The = specifier can be used to expand an expression to the text of the expression, an equal sign, then the representation of the 
+            evaluated expression:
+
+        bugs = 'roaches'                                        
+        count = 13
+        area = 'living room'
+        print(f'Debugging {bugs=} {count=} {area=}')
+        Debugging bugs='roaches' count=13 area='living room'

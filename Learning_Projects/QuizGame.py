@@ -12,11 +12,42 @@ print()
 print("------------------------------Welcome to Quiz game-----------------------------")
 print()
 print("Here is how the game works: ")
-print("Input your questions and answer and I shuffle and have you answer them")
+print("Input your questions and answer, I will shuffle and have you answer each question")
+print()
 print()
 
 
-questionsList = []
 
+
+def getQuestionsandAnswer(quesAnsDictionar):
+
+    while(True):
+            
+        print ("Please enter the Question: ")
+        questionInput = input()
+        quesAnsDictionar[questionInput] = []
+
+        print("Please enter 4 answers: ")
+        for i in range(4):
+            quesAnsDictionar[questionInput].append(input())
+            print()
+
+        print ("please enter the index of correct answer: ")
+        corAnswer = input()
+
+        print("Would you like to enter more questions, Y / N")
+        more = input()
+
+        if(more == "N"):
+            return False
+
+
+def main():
+
+    quesAnsDictionar = {}
+
+    newDict = getQuestionsandAnswer(quesAnsDictionar)
+
+    print(newDict)
 
 
