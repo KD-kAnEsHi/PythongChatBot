@@ -6,25 +6,11 @@
 
 
 def getQuestionsandAnswer(quesAnsDictionar):
-
-        print ("Please enter the Question: ")
-        questionInput = input()
-        quesAnsDictionar[questionInput] = []
-
-        print("Please enter 4 answers: ")
-        for i in range(4):
-            quesAnsDictionar[questionInput].append(input())
-            print()
-
-        print ("please enter the index of correct answer: ")
-        corAnswer = input()
+    quesAnsDictionar["Fruid"] = "apple"
 
 
-def main():
 
-    quesAnsDictionar = {}
 
-    getQuestionsandAnswer(quesAnsDictionar)
-
-    #print(quesAnsDictionar)
-
+quesAnsDictionar = {}
+print(getQuestionsandAnswer(quesAnsDictionar))
+print(quesAnsDictionar)
