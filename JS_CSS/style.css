@@ -59,14 +59,15 @@ body {
 /* Side Bar */
 #sidebar {
     position: fixed;
+    border-radius: 2%;
     top: 20%;
-    left: 0px;                 /* Initially hidden to the left */
+    left: 0px;                 /* -160 Initially hidden to the left */
     width: 180px;
     height: 50%;
     background-color: #36454F;
     color: white;
     padding-top: 100px;
-    transition: left 0.3s;      /* Transition for sliding in and out */
+    /*transition: left 0.3s;      /* Transition for sliding in and out */
     z-index: 1000; 
 }
 
@@ -100,7 +101,8 @@ body {
 }
 
 #sidebar-toggle:hover {
-    background: #465862;
+    color: #c5c5c5;
+    cursor: pointer;
 }
 
 
@@ -111,13 +113,16 @@ body {
     position: absolute;
     display: flex;
     font-size: 50px;  /* Adjust the size as needed */
-    top: 39.5%;
+    top: 37%;
     font-weight: bold;
     text-align: center;
     bottom: 20px;
     z-index: 12;
     margin-bottom: 20px; /* Space between the text and the search bar */
 }
+
+
+
 
 
 
@@ -173,6 +178,9 @@ body {
 ::placeholder {
     color: rgb(131, 131, 131);
 }
+
+
+
 
 
 
