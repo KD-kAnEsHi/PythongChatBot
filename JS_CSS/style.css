@@ -1,6 +1,7 @@
 
 /*Body of the prphram*/
 body {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,13 +12,7 @@ body {
     transition: margin-left 0.3s; /* Smooth transition when sidebar opens/closes */
 }
 
-/* Into Paragraph */
-#intro_paragraph {
-    color: rgb(191, 191, 191);
-    font-family: Arial;
-    margin-top: 100px;
-    padding: 0 30px;
-}
+
 
 /* Title "I AM HIM" */
 .title-logo {
@@ -117,7 +112,7 @@ body {
     font-weight: bold;
     text-align: center;
     bottom: 20px;
-    z-index: 12;
+    z-index: 0;
     margin-bottom: 20px; /* Space between the text and the search bar */
 }
 
@@ -188,7 +183,7 @@ body {
 #footer {  
     display: flex;
     justify-content: center;  
-    margin-bottom: -60px;
+    margin-bottom: 0px;
     margin-top: auto;
     padding: 10px 30px 10px 95px;
     position: relative;
