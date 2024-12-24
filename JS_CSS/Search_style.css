@@ -54,9 +54,9 @@ body {
 /* Side Bar */
 #sidebar {
     position: fixed;
-    border-radius: 2%;
+    border-radius: 3%;
     top: 20%;
-    left: 0px;                 /* -160 Initially hidden to the left */
+    left: -10px;                 /* -160 Initially hidden to the left */
     width: 180px;
     height: 50%;
     background-color: #36454F;
@@ -67,7 +67,7 @@ body {
 }
 
 #sidebar div {
-    padding: 15px 35px;
+    padding: 15px 22px;
     text-decoration: none;
     color: white;
     display: flex;

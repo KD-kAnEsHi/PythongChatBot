@@ -7,14 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     clickSidarButton.addEventListener('click', () => {
         if(sideBarOpen == true)
         {
-            clickSidebar.style.left = "-160px";
+            clickSidebar.style.left = "-180px";
             clickSidarButton.textContent = ">|";
+            clickSidarButton.style.right = "-30px";
             clickSidarButton.style.background = "#121212";
             clickSidebar.style.backgroundColor = "#121212";
         }
         else
         {
-            clickSidebar.style.left = "0";
+            clickSidebar.style.left = "-10px";
+            clickSidarButton.style.right = "-7px";
             clickSidebar.style.backgroundColor = "#36454F";
             clickSidarButton.style.background = "transparent";
             clickSidarButton.textContent = "|<";   
