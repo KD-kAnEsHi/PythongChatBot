@@ -1,0 +1,3 @@
+1 - have the program open a different page once we click any botton on side bar
+2 - Have the search bar reponds with an answer from gpt
+3 - add project with images in a different page

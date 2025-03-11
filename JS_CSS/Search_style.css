@@ -21,10 +21,13 @@ body {
     font-family: Arial;
     font-weight: 1000;
     position: fixed;
-    top: 15px;
+    top: 25px;
     left: 30px;
     margin: 0;
 }
+
+
+
 
 
 
@@ -46,6 +49,7 @@ body {
     color: white;
     text-decoration: none;
     margin-left: 15px;
+    font-size: 27px;
     font-family: Arial, sans-serif;
 }
 
@@ -81,6 +85,12 @@ body {
 
 
 
+
+
+
+
+
+
 /* Toggle button */
 #sidebar-toggle {
     position: absolute;
@@ -99,7 +109,6 @@ body {
     color: #c5c5c5;
     cursor: pointer;
 }
-
 
 
 /* Menace to society texts */
